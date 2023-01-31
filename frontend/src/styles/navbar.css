@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+
+body{
+    background-color: #222831;
+}
+
+
+/*NAVBAR*/
+
+.nav-logo-img{
+    width: 80px;
+    height: 50px;
+}
+
+.nav-container{
+    background-color: #F05454;
+}
+
+
+
+/*HERO*/
+
+.hero-container{
+    color: #fff;
+    background-color: #22272e;
+    margin-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+}
+
+
+.streaming{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #F05454;
+}
+
+
+
+.hero-info{
+    text-align: center;
+}
+
