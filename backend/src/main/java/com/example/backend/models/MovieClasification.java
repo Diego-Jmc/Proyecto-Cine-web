@@ -11,6 +11,11 @@ public class MovieClasification {
     private Long id;
     private String description;
 
+    public MovieClasification(Long id, String description) {
+        this.id = id;
+        this.description = description;
+    }
+
     public MovieClasification() {}
 
     public Long getId() {

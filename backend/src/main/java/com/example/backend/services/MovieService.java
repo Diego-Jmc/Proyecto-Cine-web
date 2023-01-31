@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -22,16 +23,21 @@ public class MovieService implements IMovieService {
 
     @Override
     public Optional<Movie> getById(int id) {
-        return Optional.empty();
+        return _context.findById(id);
     }
 
     @Override
-    public int save(Movie m) {
-        return 0;
+    public boolean save(Movie m) {
+        if (getAll().stream().anyMatch(e -> Objects.equals(e.getMovie_name(), m.getMovie_name())))
+            return false;
+        else
+            _context.save(m); // if not then insert the new one
+        return true;
     }
+
 
     @Override
     public void delete(int id) {
-
+        _context.deleteById(id);
     }
 }

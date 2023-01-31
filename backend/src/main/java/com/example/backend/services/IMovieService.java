@@ -7,9 +7,11 @@ import java.util.Optional;
 
 public interface IMovieService {
 
+
+
     public List<Movie> getAll();
     public Optional<Movie> getById(int id);
-    public int save(Movie m);
+    public boolean save(Movie m);
     public void delete(int id);
 
 }

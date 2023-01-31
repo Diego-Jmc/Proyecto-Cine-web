@@ -1,4 +1,5 @@
 package com.example.backend.models;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -16,17 +17,14 @@ public class Movie {
     private String director;
     private int rating;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "classification_id")
-    private MovieClasification classification;
 
-    public Movie(int movie_id, String movie_name, String sinopsis, String director, int rating, MovieClasification classification) {
+    @JsonCreator
+    public Movie(int movie_id, String movie_name, String sinopsis, String director, int rating) {
         this.movie_id = movie_id;
         this.movie_name = movie_name;
         this.sinopsis = sinopsis;
         this.director = director;
         this.rating = rating;
-        this.classification = classification;
     }
 
     public Movie() {
@@ -72,13 +70,7 @@ public class Movie {
         this.rating = rating;
     }
 
-    public MovieClasification getClassification() {
-        return classification;
-    }
 
-    public void setClassification(MovieClasification classification) {
-        this.classification = classification;
-    }
 
 }
 
