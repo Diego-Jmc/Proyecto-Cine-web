@@ -45,9 +45,6 @@ export default function Movies() {
                 newArray[i].focus = true
         }
 
-
-
-
         
         setWeekDays(newArray)
 
