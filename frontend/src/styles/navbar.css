@@ -2,8 +2,16 @@
 
 body{
     background-color: #222831;
+    font-size: 23px;
 }
 
+.hero-info{
+    margin-top: 2rem;
+}
+
+.hero-info h2{
+    color: #fff;
+}
 
 /**/
 
@@ -16,6 +24,10 @@ body{
     background-color: #F05454;
 }
 
+.nav-link{
+    color: #fff;
+    text-decoration: none;
+}
 
 
 /*HERO*/

@@ -1,0 +1,22 @@
+.form-alert{
+    width: 60%;
+    margin-top: 3rem;
+}
+
+
+
+.add-movie-form{
+    width: 60%;
+    margin-top: 3rem;
+}
+
+
+#movie_sinopsis{
+    resize: none;
+}
+
+@media screen and (max-width:900px){
+    .add-movie-form{
+        width: 100%;
+    }
+}

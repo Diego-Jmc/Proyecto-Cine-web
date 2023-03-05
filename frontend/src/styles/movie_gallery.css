@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+
+
+.movie-poster-card{
+    margin: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.poster-cover{
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+    height: 100%;
+    display: none;
+    padding: 1rem;   
+}
+
+
+
+.movie-poster-card:hover .poster-cover{
+
+    display: flex;
+
+}
+
+.poster-movie-tittle{
+   text-transform: uppercase;
+}
+
+
+.poster-movie-year{
+    color: #73777B;
+    font-weight: 300;
+    font-size:1em;
+}
+
+.movie-poster-card img{
+    width: 100%;
+
+}
+
+.poster-info{
+    margin-top: .5rem;
+    width: 100%;
+}
+
+.rating-container{
+    display: flex;
+    align-items: center;
+}
+
+.movie-gallery-grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+
+.open-movie-info-btn{
+    border: none;
+    padding: .5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    background-color: #F05454;
+    color: #fff;
+    
+}
+
+/*STAR CSS */
+
+.stars-container{
+    display: flex;
+    margin-bottom: .6em;
+    margin-left: .4em;
+}
+
+.five-pointed-star {
+    --star-color:orange;
+
+    font-size:.8em;
+    position: relative;
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-right: 1em solid transparent;
+    border-bottom: 0.7em solid var(--star-color);
+    border-left: 1em solid transparent;
+    transform: rotate(35deg);
+   }
+   .five-pointed-star:before {
+    border-bottom: 0.8em solid var(--star-color);
+    border-left: 0.3em solid transparent;
+    border-right: 0.3em solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -0.45em;
+    left: -0.65em;
+    display: block;
+    content:"";
+    transform: rotate(-35deg);
+   }
+   .five-pointed-star:after {
+    position: absolute;
+    display: block;
+    top: 0.03em;
+    left: -1.05em;
+    width: 0;
+    height: 0;
+    border-right: 1em solid transparent;
+    border-bottom: 0.7em solid var(--star-color);
+    border-left: 1em solid transparent;
+    transform: rotate(-70deg);
+    content:"";
+   }
+
+
+   @media screen and (max-width:860px){
+    .movie-gallery-grid-container{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+   }
+
+   @media screen and (max-width:600px){
+    .movie-gallery-grid-container{
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+   }

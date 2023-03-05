@@ -19,6 +19,10 @@ public class Movie {
     private int rating;
 
     private String movieImageUrl;
+
+    @OneToOne
+    private MovieClasification clasification;
+
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
     @Column(name = "launch_date")

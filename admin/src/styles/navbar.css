@@ -1,0 +1,11 @@
+.nav-container *{ 
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1.1em;
+
+}
+
+.nav-container *:hover{
+    color:#F0EEED;
+}
