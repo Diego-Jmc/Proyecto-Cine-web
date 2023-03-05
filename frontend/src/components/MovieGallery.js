@@ -66,7 +66,7 @@ export default function MovieGallery(){
 
                 <div className="poster-cover">
               
-                    <Link to={`/movie/${e.movieId}`}>  <button className="open-movie-info-btn">Detalle</button>  </Link>  
+                    <Link to={`/app/movie/${e.movieId}`}>  <button className="open-movie-info-btn">Detalle</button>  </Link>  
                 </div>    
 
 
