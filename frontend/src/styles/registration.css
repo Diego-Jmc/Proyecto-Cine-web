@@ -1,3 +1,22 @@
 body{
     color: #fff;
 }
+
+
+.register-form-control input{
+    width: 100%;
+    outline: none;
+    height: 40px;
+    background-color: #393E46;
+    color: #fff;
+
+}
+
+
+.valid-password{
+    border: 2px solid #03C988;
+}
+
+.no-border{
+    border: none;
+}

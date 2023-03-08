@@ -68,3 +68,11 @@ body{
     font-size: .9em;
     padding: .5rem;
 }
+
+.valid-password{
+    border: 2px solid #03C988;
+}
+
+.not-valid-password{
+    border: 1px solid #F05454;
+}
