@@ -33,8 +33,9 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddScoped<IGenericRepository<Movie>, MoviesRepository>();
-builder.Services.AddScoped<IMoviesService, MoviesService>();    
-
+builder.Services.AddScoped<IMoviesService, MoviesService>();
+builder.Services.AddScoped<IGenericRepository<User>, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 

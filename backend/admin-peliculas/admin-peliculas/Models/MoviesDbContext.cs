@@ -19,6 +19,7 @@ public partial class MoviesDbContext : DbContext
 
     public virtual DbSet<Movie> Movies { get; set; }
 
+    public virtual DbSet<User> Users { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -71,6 +72,24 @@ public partial class MoviesDbContext : DbContext
             entity.HasOne(d => d.Category).WithMany(p => p.Movies)
                 .HasForeignKey(d => d.CategoryId)
                 .HasConstraintName("fk_category");
+        });
+
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.PkUserId).HasName("pk_user");
+
+            entity.ToTable("users");
+
+            entity.Property(e => e.PkUserId).HasColumnName("pk_user_id");
+            entity.Property(e => e.UserEmail)
+                .IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("user_email");
+            entity.Property(e => e.UserPassword)
+                .HasMaxLength(500)
+                .IsUnicode(false)
+                .HasColumnName("user_password");
         });
 
         OnModelCreatingPartial(modelBuilder);

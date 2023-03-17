@@ -1,4 +1,5 @@
 ﻿using admin_peliculas.BLL;
+using admin_peliculas.Models;
 using admin_peliculas.RequestModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,14 +11,33 @@ namespace admin_peliculas.Controllers
     public class RegistrationController : ControllerBase
     {
 
-        EncryptMD5 encrypter = new EncryptMD5();
+        private readonly IUserService _userService;
+
+
+
+        public RegistrationController(IUserService userService)
+        {
+            _userService = userService;
+        }
 
         [HttpPost]
         [Route("[action]")]
-        public string LogIn([FromBody]LoginRequest request)
+        public async Task<IActionResult> LogIn([FromBody]LoginRequest request)
         {
-            Console.WriteLine($"el email es {request.Email} y el password {encrypter.Encrypt(request.Password)}");
-            return "Hola";
+
+            EncryptMD5 encrypter = new EncryptMD5();
+
+            if (!await _userService.CheckExistenceByEmail(request.Email))
+            {
+                User newUser = new User();
+                newUser.UserPassword = encrypter.Encrypt(request.Password);
+                newUser.UserEmail = request.Email;
+                await _userService.CreateUser(newUser);
+                return Ok();
+            }
+
+            return BadRequest();
+            
         }
 
 
