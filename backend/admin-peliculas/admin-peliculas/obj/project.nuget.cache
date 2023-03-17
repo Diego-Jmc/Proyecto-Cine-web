@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8i1dRqaZDtVBd+woKfPo8nYIjVYbCuFWInJOysBMp5UEiNo4ZItyqaq8r47jRT05Fan9I2ozEfnM7GY/bNC5Zw==",
+  "dgSpecHash": "GOfvD3fMux94j9gRv7XnZOJC2MAzJGGGPEDxJFYiMmWCsPCH5qBb6knmmvQskwL0/pYBzAmGYB+Sap46bUh0XQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego\\source\\repos\\admin-peliculas\\admin-peliculas\\admin-peliculas.csproj",
+  "projectFilePath": "C:\\Users\\diego\\Desktop\\Poryecto Cine\\Proyecto-Cine-web\\backend\\admin-peliculas\\admin-peliculas\\admin-peliculas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diego\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

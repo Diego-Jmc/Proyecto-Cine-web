@@ -3915,11 +3915,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\diego\\source\\repos\\admin-peliculas\\admin-peliculas\\admin-peliculas.csproj",
+      "projectUniqueName": "C:\\Users\\diego\\Desktop\\Poryecto Cine\\Proyecto-Cine-web\\backend\\admin-peliculas\\admin-peliculas\\admin-peliculas.csproj",
       "projectName": "admin-peliculas",
-      "projectPath": "C:\\Users\\diego\\source\\repos\\admin-peliculas\\admin-peliculas\\admin-peliculas.csproj",
+      "projectPath": "C:\\Users\\diego\\Desktop\\Poryecto Cine\\Proyecto-Cine-web\\backend\\admin-peliculas\\admin-peliculas\\admin-peliculas.csproj",
       "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\diego\\source\\repos\\admin-peliculas\\admin-peliculas\\obj\\",
+      "outputPath": "C:\\Users\\diego\\Desktop\\Poryecto Cine\\Proyecto-Cine-web\\backend\\admin-peliculas\\admin-peliculas\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
