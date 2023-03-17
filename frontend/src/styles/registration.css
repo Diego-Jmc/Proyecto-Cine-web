@@ -20,3 +20,7 @@ body{
 .no-border{
     border: none;
 }
+
+.register-form-warning{
+    margin-top: 1rem;
+}

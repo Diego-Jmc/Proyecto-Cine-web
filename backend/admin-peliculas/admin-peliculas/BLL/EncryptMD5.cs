@@ -27,7 +27,7 @@ namespace admin_peliculas.BLL
 
         }
 
-        private string DeCrypt(string encryptedMessage)
+        public string DeCrypt(string encryptedMessage)
         {
             string hash = "System hash";
             byte[] data = Convert.FromBase64String(encryptedMessage);

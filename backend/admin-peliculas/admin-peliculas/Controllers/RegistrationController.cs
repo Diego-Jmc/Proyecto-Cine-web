@@ -22,7 +22,7 @@ namespace admin_peliculas.Controllers
 
         [HttpPost]
         [Route("[action]")]
-        public async Task<IActionResult> LogIn([FromBody]LoginRequest request)
+        public async Task<IActionResult> RegisterNewUser([FromBody] LoginRequest request)
         {
 
             EncryptMD5 encrypter = new EncryptMD5();
@@ -37,10 +37,29 @@ namespace admin_peliculas.Controllers
             }
 
             return BadRequest();
-            
+
         }
 
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<IActionResult> Login([FromBody] LoginRequest request)
+        {
+
+            EncryptMD5 encrypter = new EncryptMD5();
+
+            if (await _userService.CheckExistenceByEmail(request.Email))
+            {
+           
+                var user = await _userService.GetUserByEmail(request.Email);  
+                    // Some logic here
+                    return Ok(encrypter.DeCrypt(user.UserPassword));
+                
+            }
+
+            return NoContent();
 
 
+
+        }
     }
 }
